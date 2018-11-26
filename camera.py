@@ -5,5 +5,5 @@ import time
 camera = PiCamera()
 
 camera.start_preview()
-camera.capture("~/fiyeli/img/" + str(int(time.time())) + ".jpg")
+camera.capture("img/" + str(int(time.time())) + ".jpg")
 camera.stop_preview() 
