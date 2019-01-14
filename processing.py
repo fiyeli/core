@@ -4,12 +4,13 @@ import os
 import time
 from datetime import datetime
 
-list_of_files = glob.glob("img/*") # * means all if need specificic format thyen *.csv
-latest_file = max(list_of_files, key=os.path.getctime)
-timestamp = latest_file[:-4]
+list_of_images = glob.glob("img/*")
+latest_image = max(list_of_images, key=os.path.getctime)
+timestamp = latest_image[:-4]
 timestamp = timestamp[4:]
 day = datetime.fromtimestamp(float(timestamp)).strftime("%Y-%m-%d")
 with open("data/" + day + ".csv", "a") as myFile:
-    myFile.write(timestamp + ";0\n")
+    res = os.system(os.getenv('FIYELI_AI_RUN') + latest_image)
+    myFile.write(timestamp + ";" + str(res) + "\n")
 time.sleep(1)
-os.remove(latest_file)
+os.remove(latest_image)
