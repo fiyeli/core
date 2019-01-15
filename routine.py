@@ -6,15 +6,15 @@ from datetime import datetime
 
 # Take a picture with the camera
 os.system(os.getenv('FIYELI_CAMERA_SHOT'))
-time.sleep(2)
 
 # Get the last image
-list_of_images = glob.glob('FIYELI_IMAGES' + "/*")
+list_of_images = glob.glob(os.getenv('FIYELI_IMAGES') + "/*")
 latest_image = max(list_of_images, key=os.path.getctime)
 
 # Get the timestamp and the associated day from the image name
+path_len = len(os.getenv('FIYELI_IMAGES')) + 1
 timestamp = latest_image[:-4]
-timestamp = timestamp[4:]
+timestamp = timestamp[path_len:]
 day = datetime.fromtimestamp(float(timestamp)).strftime("%Y-%m-%d")
 
 # Feeding the AI with the image to know how many person are in
