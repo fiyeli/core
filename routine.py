@@ -20,6 +20,8 @@ day = datetime.fromtimestamp(float(timestamp)).strftime("%Y-%m-%d")
 # Feeding the AI with the image to know how many person are in
 res = os.system(os.getenv('FIYELI_AI_RUN') + latest_image)
 
+res = res>>8 # We only keep the return code from os.system
+
 # Writing the result in the right CSV file
 with open(os.getenv('FIYELI_DATA') + "/" + day + ".csv", "a") as myFile:
     myFile.write(timestamp + ";" + str(res) + "\n")
