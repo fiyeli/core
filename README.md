@@ -5,7 +5,7 @@ This is the core module of Fiyeli.
 It contains a Python script that calls a Camera module and an AI module to take a picture, count the number of persons that appear on the picture and store the data into a CSV file.
 
 ## Raspberry pi 3 case
-We provide a list of 3D models avalaible on Thingiverse under  [https://creativecommons.org/licenses/by/3.0/](CC BY 3.0) or [https://creativecommons.org/licenses/by-sa/3.0/](CC BY-SA 3.0) license to create a Raspberry pi 3 case for your Fiyeli.
+We provide a list of 3D models avalaible on Thingiverse under  [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) or [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license to create a Raspberry pi 3 case for your Fiyeli.
 
 ![Picture 1](images/20190117_131217.jpg)
 ![Picture 2](images/20190117_131155.jpg)
