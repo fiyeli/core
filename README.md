@@ -21,7 +21,7 @@ Execute with the command :
 python routine.py
 ```
 After execution, a CSV file named `<year>-<month>-<day>.csv` has been created (if not already existing) in the core data directory, and the line `<timestamp>;<number of persons>` has been added.\
-The core data directory must be stored in a `FIYELI_DATA` environment variable.
+The core data directory must be stored in a `FIYELI_DATA` environment variable.\
 The picture is then removed.
 
 ## Other modules specifications
